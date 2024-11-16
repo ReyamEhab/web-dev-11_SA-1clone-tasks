@@ -1,0 +1,283 @@
+/* styles.css */
+
+/* Reset and Base Styles */
+/* Apply a global reset to remove default margins and paddings */
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Body Styles */
+/* Set base font, background color, and text color for the entire page */
+body {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font family */
+    background-color: #f4f6f9; /* Light grayish-blue background color */
+    color: #333; /* Dark gray text color for better readability */
+}
+
+/* Dashboard Container */
+/* Define the main grid layout for the dashboard using CSS Grid */
+.dashboard-container {
+    display: grid; /* Enable CSS Grid layout */
+    grid-template-areas:
+        "header header"
+        "sidebar main"; /* Define grid areas for header, sidebar, and main content */
+    grid-template-columns: 250px 1fr; /* Set sidebar width to 250px and main content to take remaining space */
+    grid-template-rows: 60px 1fr; /* Set header height to 60px and main content to fill remaining height */
+    height: 100vh; /* Make the container span the full viewport height */
+}
+
+/* Header Styles */
+/* Style the header section of the dashboard */
+.header {
+    grid-area: header; /* Place this element in the 'header' grid area */
+    background-color: #2d3e50; /* Dark blue-gray background color */
+    color: #fff; /* White text color */
+    display: flex; /* Use Flexbox for alignment */
+    align-items: center; /* Vertically center items within the header */
+    padding: 0 20px; /* Horizontal padding of 20px on left and right */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add subtle shadow below the header */
+}
+
+.header h1 {
+    font-size: 24px; /* Set font size for the header title */
+}
+
+/* Sidebar Styles */
+/* Style the sidebar navigation menu */
+.sidebar {
+    grid-area: sidebar; /* Place this element in the 'sidebar' grid area */
+    background-color: #34495e; /* Dark blue-gray background color */
+    padding-top: 20px; /* Top padding of 20px */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Add subtle shadow to the right of the sidebar */
+}
+
+.sidebar nav ul {
+    list-style: none; /* Remove default list bullets */
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px; /* Add space below each navigation item */
+}
+
+.sidebar nav ul li a {
+    display: block; /* Make the link fill the entire list item */
+    color: #bdc3c7; /* Light gray text color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 20px; /* Padding inside the link for clickable area */
+    transition: background 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+    background-color: #1abc9c; /* Teal background on hover or active state */
+    color: #fff; /* White text color on hover or active state */
+    border-radius: 4px; /* Slightly rounded corners */
+}
+
+/* Main Content Styles */
+/* Style the main content area of the dashboard */
+.main-content {
+    grid-area: main; /* Place this element in the 'main' grid area */
+    padding: 20px; /* Padding around the main content */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+/* Widgets Container */
+/* Define the layout for the widgets within the main content using CSS Grid */
+.widgets-container {
+    display: grid; /* Enable CSS Grid layout for widgets */
+    grid-template-areas:
+        "statistics recent-activity"
+        "notifications recent-activity"; /* Define grid areas for widgets */
+    grid-template-columns: 2fr 1fr; /* Set column widths: statistics takes twice the space of recent activity */
+    grid-template-rows: auto auto; /* Automatic row heights based on content */
+    gap: 20px; /* Space between grid items */
+}
+
+/* Statistics Widget */
+/* Style the Statistics widget */
+.statistics {
+    grid-area: statistics; /* Place this element in the 'statistics' grid area */
+    background-color: #fff; /* White background color */
+    padding: 20px; /* Padding inside the widget */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.statistics h2 {
+    margin-bottom: 15px; /* Space below the widget title */
+    font-size: 20px; /* Font size for the widget title */
+    color: #2d3e50; /* Dark blue-gray text color */
+}
+
+.stat-item {
+    display: flex; /* Use Flexbox to align number and label horizontally */
+    align-items: center; /* Vertically center items */
+    margin-bottom: 10px; /* Space below each statistic item */
+}
+
+.stat-number {
+    font-size: 28px; /* Larger font size for the statistic number */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #1abc9c; /* Teal color for the number */
+    margin-right: 10px; /* Space between number and label */
+}
+
+.stat-label {
+    font-size: 16px; /* Smaller font size for the statistic label */
+    color: #7f8c8d; /* Gray color for the label */
+}
+
+/* Recent Activity Widget */
+/* Style the Recent Activity widget */
+.recent-activity {
+    grid-area: recent-activity; /* Place this element in the 'recent-activity' grid area */
+    background-color: #fff; /* White background color */
+    padding: 20px; /* Padding inside the widget */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.recent-activity h2 {
+    margin-bottom: 15px; /* Space below the widget title */
+    font-size: 20px; /* Font size for the widget title */
+    color: #2d3e50; /* Dark blue-gray text color */
+}
+
+.recent-activity ul {
+    list-style: none; /* Remove default list bullets */
+}
+
+.recent-activity ul li {
+    padding: 10px; /* Padding inside each list item */
+    border-bottom: 1px solid #ecf0f1; /* Light gray bottom border for separation */
+    font-size: 16px; /* Font size for list items */
+}
+
+.recent-activity ul li:last-child {
+    border-bottom: none; /* Remove bottom border from the last list item */
+}
+
+/* Notifications Widget */
+/* Style the Notifications widget */
+.notifications {
+    grid-area: notifications; /* Place this element in the 'notifications' grid area */
+    background-color: #fff; /* White background color */
+    padding: 20px; /* Padding inside the widget */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.notifications h2 {
+    margin-bottom: 15px; /* Space below the widget title */
+    font-size: 20px; /* Font size for the widget title */
+    color: #2d3e50; /* Dark blue-gray text color */
+}
+
+.notifications ul {
+    list-style: none; /* Remove default list bullets */
+}
+
+.notifications ul li {
+    padding: 10px; /* Padding inside each list item */
+    border-bottom: 1px solid #ecf0f1; /* Light gray bottom border for separation */
+    font-size: 16px; /* Font size for list items */
+}
+
+.notifications ul li:last-child {
+    border-bottom: none; /* Remove bottom border from the last list item */
+}
+
+/* Responsive Design */
+/* Adjust the layout for tablets and smaller screens */
+@media (max-width: 1024px) {
+    .widgets-container {
+        grid-template-areas:
+            "statistics"
+            "recent-activity"
+            "notifications"; /* Stack widgets vertically */
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-rows: auto auto auto; /* Automatic row heights */
+    }
+
+    .statistics, .recent-activity, .notifications {
+        margin-left: 0; /* Remove any left margin */
+    }
+}
+
+/* Adjust the layout for mobile devices */
+@media (max-width: 768px) {
+    .dashboard-container {
+        grid-template-areas:
+            "header"
+            "main"; /* Collapse sidebar and main content */
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-rows: 60px 1fr; /* Header height remains, main content fills remaining space */
+    }
+
+    .sidebar {
+        grid-area: header; /* Move sidebar to the header area */
+        width: 100%; /* Make sidebar full width */
+        height: 60px; /* Set fixed height for the header */
+        display: flex; /* Use Flexbox for alignment */
+        align-items: center; /* Vertically center items */
+        padding: 0 20px; /* Horizontal padding */
+    }
+
+    .sidebar nav ul {
+        display: flex; /* Display navigation items in a row */
+    }
+
+    .sidebar nav ul li {
+        margin: 0 10px; /* Horizontal margin between navigation items */
+    }
+
+    .sidebar nav ul li a {
+        padding: 8px 12px; /* Smaller padding for navigation links */
+        font-size: 14px; /* Smaller font size for navigation links */
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove left margin as sidebar is now at the top */
+        padding-top: 80px; /* Add top padding to prevent overlap with fixed sidebar */
+    }
+
+    .widgets-container {
+        grid-template-areas:
+            "statistics"
+            "recent-activity"
+            "notifications"; /* Stack widgets vertically */
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-rows: auto auto auto; /* Automatic row heights */
+    }
+}
+
+/* Adjust the layout for very small screens */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 20px; /* Smaller font size for header title */
+    }
+
+    .sidebar nav ul li a {
+        font-size: 12px; /* Even smaller font size for navigation links */
+        padding: 6px 8px; /* Reduced padding for navigation links */
+    }
+
+    .statistics h2,
+    .recent-activity h2,
+    .notifications h2 {
+        font-size: 18px; /* Smaller font size for widget titles */
+    }
+
+    .stat-number {
+        font-size: 24px; /* Smaller font size for statistic numbers */
+    }
+
+    .stat-label,
+    .recent-activity ul li,
+    .notifications ul li {
+        font-size: 14px; /* Smaller font size for labels and list items */
+    }
+}

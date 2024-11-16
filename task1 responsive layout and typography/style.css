@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+ }
+
+/* Ensure the page takes up the full height */
+html, body {
+    background-color: #e9e9e9;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* White background from top to bottom of the page */
+main {
+    background-color: white;
+    margin: 0 auto;
+    max-width: 1000px;
+ }
+ @media only screen and (max-width: 1024px) {
+    main {
+ /* Adjust width for tablet and mobile */
+        max-width: 770px;
+}
+}
+
+ 
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Logo Styles */
+.header img {
+    width: 200px;
+    max-width: 100%;
+}
+
+
+
+/* Responsive Design for deskop and mobile */
+@media only screen and (max-width: 1200) {
+    .header img {
+        width: 200px; /* Adjust width for tablet and mobile */
+    }
+}
+
+/* Responsive Design for tablet and mobile */
+@media only screen and (max-width: 720px) {
+    .header img {
+        width: 80px; /* Adjust width for tablet and mobile */
+    }
+}
+
+
+/* Flex container for navigation */
+.flex-container {
+    display: flex;
+     align-items: center;
+}
+
+.flex-item {
+    padding: 40px 0;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+/* Typography */
+h1 {
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 5px;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+@media only screen and (max-width: 360px) {
+    h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    }
+}
+
+h3 {
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 2rem;
+    padding-left: 50px;
+    padding-bottom: 15px;
+ }
+
+p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    padding-left: 30px;
+ }
+
+/* Three-column layout */
+.column {
+    float: left;
+    width: 31.5%;
+    padding: 1px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h2 {
+    font-family: 'Protest Guerrilla', sans-serif;
+    padding-left: 30px;
+    font-size: 2.5rem;
+    padding-bottom: 15px;
+}
+
+/* Responsive Design */
+
+/* Large devices (desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .flex-container {
+        justify-content: space-around;
+    }
+}
+
+/* Tablets (between `360px-720px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .column {
+        width: 48%; /* Two columns on tablets */
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .flex-item {
+        font-size: 1.25rem;
+    }
+}
+
+/* Small mobile devices (below 767px) */
+@media only screen and (max-width: 767px) {
+    .column {
+        width: 100%; /* Single column on small mobile devices */
+    }
+
+    .flex-container {
+        justify-content: space-around; /* Space flex items evenly on large screens */
+
+    }
+
+    .flex-item {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        text-align: center;
+
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        text-align: center;
+
+
+    }
+    
+    p {
+        font-size: 0.9rem;
+    }
+    
+    h2{
+        text-align: center;
+
+    }
+}
+
+/* Large mobile devices (between 768px and 992px) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .column {
+        width: 100%; /* Single column on large mobile devices */
+    }
+
+    .flex-item {
+        font-size: 1.3rem;
+    }
+    
+    h1 {
+        font-size: 2.25rem;
+    }
+}
+
+/* Ensure the columns switch to three on tablets */
+@media only screen and (min-width: 1024px) {
+    .column {
+        width: 30%; /* Adjust to fit 3 columns */
+        margin: 0 1%; /* Add horizontal margin for spacing */
+    }
+}
+
+/* Responsive Design for larger devices (desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .flex-container {
+        justify-content: space-around;
+    }
+}
+
+/* Reset float for the row */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Additional responsive styles */
+@media only screen and (max-width: 769px) {
+    .column {
+        width: 100%; /* Full width for smaller devices */
+    }
+}
+
+
+/* Basic styling for the gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 equal rows */
+    grid-gap: 0; /* Remove spacing between images */
+}
+
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images cover the area without distortion */
+}
+
+/* Place the first image on the left, spanning two columns and two rows */
+.gallery__item--1 {
+    grid-column: 1 / 3; /* Span across two columns (first and second) */
+    grid-row: 1 / 3; /* Span across two rows */
+}
+
+/* Arrange the other four images in the remaining grid columns */
+.gallery__item--2 {
+    grid-column: 3 / 4; /* Third column */
+    grid-row: 1 / 2; /* First row */
+}
+
+.gallery__item--3 {
+    grid-column: 4 / 5; /* Fourth column */
+    grid-row: 1 / 2; /* First row */
+}
+
+.gallery__item--4 {
+    grid-column: 3 / 4; /* Third column */
+    grid-row: 2 / 3; /* Second row */
+}
+/* Responsive Design */
+
+/* Small mobile devices (360px to 719px) */
+@media only screen and (max-width: 719px) {
+    .gallery {
+        display: flex;
+        flex-direction: column; 
+    }
+    .gallery__item--1 {
+        display: none; /* Hide the first image (all-encores.jpg) */
+    }
+   
+}
+
+
+/* Tablets (between 768px and 1199px) */
+@media only screen and (min-width: 720px) and (max-width: 1020px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+        grid-template-rows: repeat(2, 1fr); /* 2 equal rows */
+    }
+}
+
+/* Author Container */
+.author-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Author Details (Left Side) */
+.author-details {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.author-name {
+    font-size: 2rem;
+    font-family: 'Protest Guerrilla', sans-serif;
+    margin-bottom: 20px;
+}
+
+.author-bio {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 15px;
+}
+
+/* Author Image (Right Side) */
+.author-container .author-image img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+}
+
+/* Responsive Design */
+
+/* Small mobile devices (360px to 540px) */
+@media only screen and (max-width: 540px) {
+    .author-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align items */
+        text-align: center; /* Center text */
+    }
+
+    .author-image {
+        order: -1; /* Place the image before text content */
+        margin-bottom: 20px;
+    }
+
+    .author-image img {
+        width: 80px; /* Smaller image size on mobile */
+    }
+
+    .author-name {
+        font-size: 1.5rem; /* Adjust font size for mobile */
+    }
+
+    .author-bio {
+         font-size: 0.5rem; /* Normal font size */
+        text-align: left;
+    }
+}
+
+/* Tablets (720px to 1024px) */
+@media only screen and (min-width: 720px) and (max-width: 1024px) {
+    .author-container {
+        flex-direction: row; /* Keep items in a row */
+        align-items: flex-start;
+        text-align: left; /* Left-align text */
+    }
+
+    .author-image img {
+        width: 150px; /* Adjust image size for tablet */
+    }
+
+    .author-name {
+        font-size: 1.75rem; /* Adjust font size for tablet */
+    }
+
+    .author-bio {
+        font-size: 1rem; /* Normal font size */
+    }
+    .author-bio {
+        font-size: 1rem; /* Normal font size */
+    }
+}
+
+/* Ensure footer is at the bottom even if content is short */
+footer {
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #14181d;
+    color: white;
+    padding: 20px 0;
+}

@@ -1,0 +1,26 @@
+.row1, .row2 {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: hidden;  /* Prevent horizontal scroll */
+}
+
+.row1 img, .row2 img {
+  width: 25%;  /* Each image takes up 25% of the width */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0;  /* Remove any default margin */
+  padding: 0;  /* Remove any default padding */
+  box-sizing: border-box;  /* Ensure padding and borders are included in the width calculation */
+}
+
+/* Additional media query for smaller screens to adjust image size */
+@media (max-width: 768px) {
+  .row1 img, .row2 img {
+    width: 50%;  /* Adjust to fit 2 images per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .row1 img, .row2 img {
+    width: 100%;  /* Adjust to fit 1 image per row on small screens */
+  }
+}

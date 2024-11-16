@@ -1,0 +1,201 @@
+
+.header_button{
+    padding: 16px;
+    font-family: 'Teko', sans-serif;
+    border-radius: 25px;
+    background-color: white;
+    color: #231651;
+    font-size: 2em;
+}
+
+
+.header_button {
+    --c:  #ffffff; /* the color*/
+    
+    box-shadow: 0 0 0 .1em inset var(--c); 
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background: 
+      var(--_g) calc(var(--_p,0%) - 100%) 0%,
+      var(--_g) calc(200% - var(--_p,0%)) 0%,
+      var(--_g) calc(var(--_p,0%) - 100%) 100%,
+      var(--_g) calc(200% - var(--_p,0%)) 100%;
+    background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
+  }
+  .header_button:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+  }
+  .header_button:active {
+    box-shadow: 0 0 9e9q inset #4DCCBC; 
+    background-color: var(--c);
+    color: #231651;
+}
+ 
+
+.lala-button{
+    padding: 16px;
+    font-family: 'Teko', sans-serif;
+    border-radius: 25px;
+    background-color: white;
+    color: #231651;
+    font-size: 2em;
+    margin-bottom: 16px;
+    width: 600px;
+}
+
+
+.lala-button {
+    --c:  #ffffff; /* the color*/
+    
+    box-shadow: 0 0 0 .1em inset var(--c); 
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background: 
+      var(--_g) calc(var(--_p,0%) - 100%) 0%,
+      var(--_g) calc(200% - var(--_p,0%)) 0%,
+      var(--_g) calc(var(--_p,0%) - 100%) 100%,
+      var(--_g) calc(200% - var(--_p,0%)) 100%;
+    background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
+  }
+  .lala-button:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+  }
+  .lala-button:active {
+    box-shadow: 0 0 9e9q inset #4DCCBC; 
+    background-color: var(--c);
+    color: #231651;
+}
+
+   
+.column-button1{
+    padding: 16px;
+    font-family: 'Teko', sans-serif;
+    border-radius: 25px;
+    background-color: white;
+    color: #231651;
+    font-size: 2em;
+     width: 400px;
+}
+
+
+.column-button1 {
+    --c:  #ffffff; /* the color*/
+    
+    box-shadow: 0 0 0 .1em inset var(--c); 
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background: 
+      var(--_g) calc(var(--_p,0%) - 100%) 0%,
+      var(--_g) calc(200% - var(--_p,0%)) 0%,
+      var(--_g) calc(var(--_p,0%) - 100%) 100%,
+      var(--_g) calc(200% - var(--_p,0%)) 100%;
+    background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
+  }
+  .column-button1:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+  }
+  .column-button1:active {
+    box-shadow: 0 0 9e9q inset #4DCCBC; 
+    background-color: var(--c);
+    color: #231651;
+}
+
+  
+.column-button2{
+    padding: 16px;
+    font-family: 'Teko', sans-serif;
+    border-radius: 25px;
+    background-color: white;
+    color: #231651;
+    font-size: 2em;
+    margin-top: 58px;
+    width: 400px;
+}
+
+
+.column-button2 {
+    --c:  #ffffff; /* the color*/
+    
+    box-shadow: 0 0 0 .1em inset var(--c); 
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background: 
+      var(--_g) calc(var(--_p,0%) - 100%) 0%,
+      var(--_g) calc(200% - var(--_p,0%)) 0%,
+      var(--_g) calc(var(--_p,0%) - 100%) 100%,
+      var(--_g) calc(200% - var(--_p,0%)) 100%;
+    background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
+  }
+.column-button2:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+  }
+  .column-button2:active {
+    box-shadow: 0 0 9e9q inset #4DCCBC; 
+    background-color: var(--c);
+    color: #231651;
+}
+
+
+
+.row-button {
+    background-color: #4DCCBC;
+    color: #231651;
+    padding: 16px;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    margin-top: 16px;  /* Reduce the space between button and text */
+    width: 400px;
+    display: flex;
+    font-family: 'Teko', sans-serif;
+    border-radius: 25px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+.row-button:hover {
+    background-color: #4DCCBC;
+}
+.row-button{
+    padding: 16px;
+    font-family: 'Teko', sans-serif;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+   
+.row-button {
+        --c:  #ffffff; /* the color*/
+        
+        box-shadow: 0 0 0 .1em inset var(--c); 
+        --_g: linear-gradient(var(--c) 0 0) no-repeat;
+        background: 
+        var(--_g) calc(var(--_p,0%) - 100%) 0%,
+        var(--_g) calc(200% - var(--_p,0%)) 0%,
+        var(--_g) calc(var(--_p,0%) - 100%) 100%,
+        var(--_g) calc(200% - var(--_p,0%)) 100%;
+    background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
+    }
+.row-button:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+    }
+.row-button:active {
+    box-shadow: 0 0 9e9q inset #4DCCBC; 
+    background-color: var(--c);
+    color: #231651;
+    }

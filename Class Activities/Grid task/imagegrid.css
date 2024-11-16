@@ -1,0 +1,28 @@
+/* imagegrid.css */
+
+/* Gallery Container */
+.gallery {
+  display: grid; /* Enable CSS Grid layout for the gallery */
+  grid-template-columns: repeat(4, 1fr); /* Define four equal-width columns */
+  grid-auto-rows: auto; /* Automatically determine row heights based on content */
+  grid-auto-flow: dense; /* Fill in gaps in the grid as items are placed */
+  gap: 6px; /* Set a 6px gap between grid items, both row and column */
+}
+
+/* General Image Styles */
+img {
+  width: 100%; /* Make images take up the full width of their grid cell */
+  height: 100%; /* Make images take up the full height of their grid cell */
+  object-fit: cover; /* Scale images to cover their container while maintaining aspect ratio */
+}
+
+/* Image Spanning Four Grid Cells */
+img.four-grid-cells {
+  grid-row: span 2 / auto; /* Make the image span 2 rows */
+  grid-column: span 2 / auto; /* Make the image span 2 columns */
+}
+
+/* Wide Image Spanning Two Columns */
+img.wide-image {
+  grid-column: span 2 / auto; /* Make the image span 2 columns */
+}

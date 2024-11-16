@@ -1,0 +1,203 @@
+/* styles.css */
+
+/* Reset and Base Styles */
+/* Apply a global reset to remove default margins and paddings */
+html {
+  height: 100%; /* Set the height of the html element to 100% of the viewport height */
+}
+
+body {
+  margin: 0; /* Remove default margin from the body */
+  display: grid; /* Enable CSS Grid layout for the body */
+}
+
+/* Background Animations */
+/* Style for background layers with animations and gradients */
+.bg {
+  animation: slide 3s ease-in-out infinite alternate; /* Apply the 'slide' animation with specified duration, timing, and iteration */
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%); /* Create a linear gradient background with two colors split at 50% */
+  bottom: 0; /* Position the bottom of the element at the bottom of the viewport */
+  left: -50%; /* Position the element 50% to the left of the viewport */
+  opacity: 0.5; /* Set the opacity to 50% for transparency */
+  position: fixed; /* Fix the element's position relative to the viewport */
+  right: -50%; /* Position the element 50% to the right of the viewport */
+  top: 0; /* Position the top of the element at the top of the viewport */
+  z-index: -1; /* Place the element behind other content */
+}
+
+/* Additional background layers with modified animation properties */
+.bg2 {
+  animation-direction: alternate-reverse; /* Reverse the animation direction on each iteration */
+  animation-duration: 4s; /* Set the duration of the animation to 4 seconds */
+}
+
+.bg3 {
+  animation-duration: 5s; /* Set the duration of the animation to 5 seconds */
+}
+
+/* Content Overlay */
+/* Style for a content overlay positioned at the center */
+.content {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border-radius: 0.25em; /* Slightly rounded corners */
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25); /* Subtle shadow for depth */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  left: 50%; /* Position the element 50% from the left of the viewport */
+  padding: 10vmin; /* Responsive padding based on viewport size */
+  position: fixed; /* Fix the element's position relative to the viewport */
+  text-align: center; /* Center-align text within the element */
+  top: 50%; /* Position the element 50% from the top of the viewport */
+  transform: translate(-50%, -50%); /* Center the element both vertically and horizontally */
+}
+
+/* Heading Styles */
+/* Apply monospace font to all h1 elements */
+h1 {
+  font-family: monospace; /* Use monospace font for h1 elements */
+}
+
+/* Keyframes for Slide Animation */
+/* Define the 'slide' animation used by background layers */
+@keyframes slide {
+  0% {
+      transform: translateX(-25%); /* Start the animation by moving the element 25% to the left */
+  }
+  100% {
+      transform: translateX(25%); /* End the animation by moving the element 25% to the right */
+  }
+}
+
+/* Body Styles */
+/* Additional styles for the body element */
+body {
+  margin: 0; /* Remove default margin from the body (redundant, already set above) */
+  font-family: "Lato", sans-serif; /* Set the font family to 'Lato' with a fallback to sans-serif */
+}
+
+/* Sidebar Styles */
+/* Style for the sidebar navigation */
+.sidebar {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  width: 200px; /* Set fixed width for the sidebar */
+  background-color: #f1f1f1; /* Light gray background color */
+  position: fixed; /* Fix the sidebar's position relative to the viewport */
+  font-family: "Noto Serif", serif; /* Set the font family to 'Noto Serif' with a fallback to serif */
+  height: 100%; /* Make the sidebar span the full height of the viewport */
+  overflow: auto; /* Enable scrolling if content overflows */
+  font-size: 25px; /* Set the font size for sidebar links */
+}
+
+/* Sidebar Links */
+/* Style for the links within the sidebar */
+.sidebar a {
+  display: block; /* Make the links block-level elements for full clickable area */
+  color: black; /* Set the text color to black */
+  padding: 16px; /* Add padding around the links */
+  text-decoration: none; /* Remove underline from links */
+}
+
+/* Active Sidebar Link */
+/* Style for the active link in the sidebar */
+.sidebar a.active {
+  background-color: #04AA6D; /* Green background color for active link */
+  color: white; /* White text color for active link */
+}
+
+/* Hover Effect for Sidebar Links */
+/* Style for sidebar links on hover, excluding the active link */
+.sidebar a:hover:not(.active) {
+  background-color: #555; /* Dark gray background on hover */
+  color: white; /* White text color on hover */
+}
+
+/* Minecraft Logo Styles */
+/* Style for the primary logo image */
+.logo-primary {
+  width: 25%; /* Set the width to 25% of its container */
+  margin-left: 1500px; /* Add a large left margin to position the logo (potentially problematic for responsiveness) */
+}
+
+/* Page1 Section Styles */
+/* Style for the first page or section */
+.page1 {
+  margin-left: 300px; /* Add left margin to position the content away from the sidebar */
+  margin-top: 200px; /* Add top margin to position the content vertically */
+}
+
+/* Page1 Text Styles */
+/* Style for paragraph and h1 elements within the .page1 class */
+.page1 p,
+.page1 h1 {
+  color: black; /* Set text color to black */
+  font-size: 35px; /* Set font size to 35px */
+  font-family: monospace; /* Use monospace font */
+}
+
+/* Page1 Heading Styles */
+/* Additional styling for h1 elements within the .page1 class */
+.page1 h1 {
+  color: black; /* Reinforce black text color */
+  font-size: 45px; /* Increase font size to 45px for h1 */
+  font-family: monospace; /* Use monospace font */
+}
+
+/* Page1 Subheading Styles */
+/* Style for h5 elements within the .page1 class */
+.page1 h5 {
+  color: black; /* Set text color to black */
+  font-size: 25px; /* Set font size to 25px */
+  font-family: monospace; /* Use monospace font */
+}
+
+/* Page1 Image Styles */
+/* Style for the image container in page1 */
+.page1-img {
+  margin-left: 1700px; /* Add an extremely large left margin to position the image (potentially problematic for responsiveness) */
+  margin-top: -250px; /* Add negative top margin to position the image overlapping previous content */
+  width: 200px; /* Set fixed width for the image container */
+  height: 500px; /* Set fixed height for the image container */
+  display: grid; /* Use CSS Grid for layout within the image container (may not be necessary) */
+}
+
+/* General Reset */
+/* Apply a global reset to remove default margins and paddings */
+* {
+  padding: 0; /* Remove default padding from all elements */
+  margin: 0; /* Remove default margin from all elements */
+}
+
+/* Container Styles */
+/* Style for the main container that holds the image grid */
+.container {
+  max-width: 1224px; /* Set maximum width for the container */
+  width: 90%; /* Set width to 90% of its parent */
+  margin: auto; /* Center the container horizontally */
+  padding: 40px 0; /* Add vertical padding of 40px */
+}
+
+/* Title Styles */
+/* Style for the title within the container */
+.title {
+  margin-bottom: 2rem; /* Add bottom margin of 2 rem units */
+  margin-left: 100px; /* Add left margin of 100px */
+}
+
+/* Photo Gallery Styles */
+/* Style for the photo gallery container */
+.photo-gallery {
+  display: flex; /* Use Flexbox for layout */
+  gap: 20px; /* Add a gap of 20px between flex items */
+  margin-left: -200px; /* Add negative left margin (potentially problematic for responsiveness) */
+}
+
+/* Column Styles */
+/* Style for each column within the photo gallery */
+.column {
+  display: flex; /* Use Flexbox for layout */
+  flex-direction: column; /* Arrange items vertically */
+  gap: 20px; /* Add a gap of 20px between items */
+}
+
+/* Additional Considerations */
+/* Note: The large fixed margins (e.g., margin-left: 1500px) can cause layout issues on smaller screens. It's recommended to use relative units or CSS Grid/Flexbox to handle positioning more responsively. */

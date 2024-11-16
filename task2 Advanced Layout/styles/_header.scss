@@ -1,0 +1,87 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+h1 {
+    font-family: 'Teko', sans-serif;
+    font-size: 3em; /* Tablet and Desktop */
+    margin: 0;
+    color: #231651;
+    padding: 16px;
+}
+
+header {
+    display: flex;
+    align-items: center; /* Vertically center elements */
+    padding: 16px;
+    justify-content: space-between; /* Space between h1 and nav */
+    color: #ffffff;
+    background-color: #4DCCBC;  /* Background color */
+    padding: 16px;
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+    box-shadow: 0 8px 8px #ffffff; /* Initial shadow */
+}
+
+.nav1 {
+    display: flex;
+    gap: 48px; /* Large spacing */
+    justify-content: center;
+}
+
+.nav1 a {
+    font-family: 'Teko', sans-serif;
+    font-size: 3em; /* Button font size */
+    text-decoration: none;
+    color: white;
+}
+
+main{
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 4px;
+   }
+
+   .lalaland{
+    box-shadow: 0 20px 60px #ffffff;
+    margin-top: 48px;
+}
+
+.container {
+    display: flex;
+    gap: 48px;
+    margin-bottom: 48px; /* Adds space below la_la-land_info */
+}
+
+.column1 {
+flex: 1;
+text-align: center;
+background-color: #4DCCBC;
+box-shadow: 0 20px 60px #ffffff; /* Initial shadow */
+}
+
+.first{
+     height: 400px;
+}
+
+.column2 {
+    flex: 1;
+    text-align: center;
+    background-color: #4DCCBC;
+    box-shadow: 0 20px 60px #ffffff; /* Initial shadow */
+    }
+
+    
+.row {
+    display: flex;
+    align-items: center;
+    background-color: #4DCCBC;
+    box-shadow: 0 20px 60px #ffffff;
+    max-width: 900px;
+    margin-bottom: 48px;
+ }
+
+ .content {
+    padding-left: 16px;  /* Add space between image and text */
+ }

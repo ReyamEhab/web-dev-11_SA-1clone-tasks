@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- Declare the document type as HTML5 -->
+
+<html lang="en">
+<!-- Root element of the HTML document with language attribute set to English -->
+
+<head>
+    <!-- Head section containing meta information, title, and links to stylesheets -->
+    
+    <meta charset="UTF-8">
+    <!-- Specify the character encoding for the HTML document as UTF-8 -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Set the viewport to make the website responsive on different devices -->
+    
+    <title>Simple Dashboard Layout</title>
+    <!-- Title of the webpage that appears in the browser tab -->
+    
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="Dashboardinterface.css">
+    <!-- Connects the external CSS stylesheet to the HTML document -->
+    
+    <!-- Link for Google Fonts (optional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Imports the 'Roboto' font family from Google Fonts with weights 400 and 700 -->
+</head>
+
+<body>
+    <!-- Body section containing all the visible content of the webpage -->
+    
+    <div class="dashboard-container">
+        <!-- Main container that uses CSS Grid to layout header, sidebar, and main content -->
+        
+        <!-- Header -->
+        <header class="header">
+            <!-- Header section of the dashboard -->
+            <h1>Dashboard</h1>
+            <!-- Heading for the dashboard -->
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Sidebar section containing navigation links -->
+            <nav>
+                <!-- Navigation block -->
+                <ul>
+                    <!-- Unordered list for navigation items -->
+                    <li><a href="#">Home</a></li>
+                    <!-- Navigation link to Home -->
+                    <li><a href="#">Statistics</a></li>
+                    <!-- Navigation link to Statistics -->
+                    <li><a href="#">Reports</a></li>
+                    <!-- Navigation link to Reports -->
+                    <li><a href="#">Settings</a></li>
+                    <!-- Navigation link to Settings -->
+                    <li><a href="#">Logout</a></li>
+                    <!-- Navigation link to Logout -->
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Main content area of the dashboard -->
+            
+            <!-- Widgets Container -->
+            <div class="widgets-container">
+                <!-- Container that holds all the dashboard widgets -->
+                
+                <!-- Statistics Widget -->
+                <section class="widget statistics">
+                    <!-- Section for displaying statistics -->
+                    <h2>Statistics</h2>
+                    <!-- Heading for the Statistics widget -->
+                    
+                    <div class="stat-item">
+                        <!-- Individual statistic item -->
+                        <span class="stat-number">150</span>
+                        <!-- Number representing the statistic (e.g., Users) -->
+                        <span class="stat-label">Users</span>
+                        <!-- Label describing the statistic -->
+                    </div>
+                    
+                    <div class="stat-item">
+                        <!-- Another statistic item -->
+                        <span class="stat-number">75</span>
+                        <!-- Number representing the statistic (e.g., Sales) -->
+                        <span class="stat-label">Sales</span>
+                        <!-- Label describing the statistic -->
+                    </div>
+                    
+                    <div class="stat-item">
+                        <!-- Another statistic item -->
+                        <span class="stat-number">120</span>
+                        <!-- Number representing the statistic (e.g., Visits) -->
+                        <span class="stat-label">Visits</span>
+                        <!-- Label describing the statistic -->
+                    </div>
+                </section>
+
+                <!-- Recent Activity Widget -->
+                <section class="widget recent-activity">
+                    <!-- Section for displaying recent user activities -->
+                    <h2>Recent Activity</h2>
+                    <!-- Heading for the Recent Activity widget -->
+                    <ul>
+                        <!-- Unordered list of recent activities -->
+                        <li><strong>John Doe</strong> signed up.</li>
+                        <!-- Activity item indicating John Doe signed up -->
+                        <li><strong>Jane Smith</strong> made a purchase.</li>
+                        <!-- Activity item indicating Jane Smith made a purchase -->
+                        <li><strong>Mike Johnson</strong> updated profile.</li>
+                        <!-- Activity item indicating Mike Johnson updated his profile -->
+                        <li><strong>Emily Davis</strong> commented on a post.</li>
+                        <!-- Activity item indicating Emily Davis commented on a post -->
+                        <li><strong>Chris Lee</strong> uploaded a file.</li>
+                        <!-- Activity item indicating Chris Lee uploaded a file -->
+                    </ul>
+                </section>
+
+                <!-- Notifications Widget -->
+                <section class="widget notifications">
+                    <!-- Section for displaying notifications -->
+                    <h2>Notifications</h2>
+                    <!-- Heading for the Notifications widget -->
+                    <ul>
+                        <!-- Unordered list of notifications -->
+                        <li>You have 5 new messages.</li>
+                        <!-- Notification about new messages -->
+                        <li>Your order #1234 has been shipped.</li>
+                        <!-- Notification about order shipment -->
+                        <li>New comment on your post.</li>
+                        <!-- Notification about a new comment -->
+                        <li>Password will expire in 3 days.</li>
+                        <!-- Notification about password expiration -->
+                        <li>Update available for your application.</li>
+                        <!-- Notification about application update -->
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
